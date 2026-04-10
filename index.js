@@ -74,7 +74,7 @@ app.get("/send-test", async (req, res) => {
 ];
 
 for (const number of customers) {
-  await sendMessage(number, "lundries");
+  await sendMessage(number, "laundries");
 }
   res.json(result);
 });
