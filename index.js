@@ -67,7 +67,15 @@ async function sendMessage(to, templateName) {
 }
 
 app.get("/send-test", async (req, res) => {
-  const result = await sendMessage("966XXXXXXXXX", "اسم_قالبك");
+  const customers = [
+  "966580586898",
+  "966556012150",
+  "966555717471"
+];
+
+for (const number of customers) {
+  await sendMessage(number, "lundries");
+}
   res.json(result);
 });
 
